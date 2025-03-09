@@ -75,7 +75,14 @@ int main() {
 			int mid = left + (right - left)/2;
 			
 			//midValue calculation for 2D 
-			int midValue = a[mid / col][mid % col];
+			int midValue = a[mid / col][mid % col]; //you will determine the value that the mid index has
+
+			/*
+			EXPLANATION NG MIDVALUE CALCULATION
+			a[row][col]
+			row = mid / col; || ex: our mid is 7, and our array is 4 x 4 this tells na "oh sa isang row 4 lang pwede kaya pag sumobra na sa apat at wala pa yung 7 kumabilang row ka na"
+			col = mid % col || ex: mid still 7, this tells na "oh kapag nasa tamang row ka na yung number na to puntahan mo andon si 7"
+			*/
 			
 			if (midValue == key) {
 				printf("Target Found at a[%d][%d]!\n", mid / col, mid % col);
@@ -83,7 +90,7 @@ int main() {
 				break;
 			}
 			
-			else if (key > midValue){ // move to the right side of equation 
+			else if (key > midValue){ // move to the right side of equation if your key is greater than midValue
 				left = mid + 1;
 			}
 			
