@@ -106,27 +106,27 @@ int main() {
 		
 		
 		// Output 1 | Printing Sorted 2D Array with Borders
-	printf("\nSorted 2D Array:\n");
+		printf("\nSorted 2D Array:\n");
 
-	for (int i = 0; i < row; i++) {
-    	// Print top border
-    	for (int j = 0; j < col; j++) {
-        	printf("+------");
-    	}
-   		 printf("+\n");
+		for (int i = 0; i < row; i++) {
+    		// Print top border
+    			for (int j = 0; j < col; j++) {
+        			printf("+------");
+    			}
+   			 printf("+\n");
 
-    	// Print row values with vertical bars
-    	for (int j = 0; j < col; j++) {
-        	printf("| %4d ", a[i][j]); // %2d ensures numbers align properly
-    	}
-    	printf("|\n");
-}
+    		// Print row values with vertical bars
+    			for (int j = 0; j < col; j++) {
+        			printf("| %4d ", a[i][j]); // %2d ensures numbers align properly
+    			}
+    			printf("|\n");
+		}
 
-// Print bottom border
-for (int j = 0; j < col; j++) {
-    printf("+------");
-}
-printf("+\n");
+		// Print bottom border
+		for (int j = 0; j < col; j++) {
+   		 printf("+------");
+		}
+		printf("+\n");
 		
 		
 		tryAgain (&getTry, &tCheck);
