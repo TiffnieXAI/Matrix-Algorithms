@@ -13,14 +13,16 @@ Description:
 void printArray(int row, int col, int a[row][col]);
 
 int main() {
-    // Predefined 2D Array
+    // Input 1: row, col, array elements
     int row = 2, col = 5;
     int a[2][5] = {
         {3, 2, 1, 4, 5},
         {6, 0, 7, 9, 8}
     };
 
-    // Convert to 1D array
+
+    
+    // PRO 1: Flatten to 1D
     int size = row * col;
     int tempA[size], tempIn = 0;
 
@@ -28,7 +30,9 @@ int main() {
         for (int j = 0; j < col; j++) 
             tempA[tempIn++] = a[i][j];
 
-    // Output: Original Array
+
+    
+    // Output 1: Original Array
     printf("Original Array:\n");
     printArray(row, col, a);
 
